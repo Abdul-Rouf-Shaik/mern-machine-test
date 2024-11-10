@@ -1,4 +1,4 @@
-import axios from "../http";
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { motion } from "framer-motion";

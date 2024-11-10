@@ -5,13 +5,14 @@ import {upload} from "../middlewares/multer.middleware.js"
 
 const router = Router();
 
+router.get('/', getEmployees);
 router.post('/', upload.fields([
     {
         name: "image",
         maxCount: 1
     }
 ]), addEmployee);
-router.get('/', getEmployees);
+
 router.put('/:id', upload.fields([
     {
         name: "image",

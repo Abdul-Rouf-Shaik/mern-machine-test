@@ -5,7 +5,7 @@ import cookieParser from "cookie-parser"
 const app = express()
 
 app.use(cors({
-    origin: ["https://mern-machine-test-delta.vercel.app", "http://localhost:5173"],
+    origin: process.env.CORS_ORGIN,
     credentials: true,
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: 'Content-Type,Authorization',

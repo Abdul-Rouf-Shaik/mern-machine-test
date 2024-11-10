@@ -7,7 +7,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
 import { Button } from "./ui/button";
-import axios from "../http";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 
