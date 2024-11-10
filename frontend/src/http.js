@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const http = axios.create({
-  baseURL: "https://mern-machine-test-api-psi.vercel.app",
+  baseURL: "https://localhost:8000",
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",

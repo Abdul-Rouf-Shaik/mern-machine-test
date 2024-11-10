@@ -12,10 +12,11 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://mern-machine-test-api-psi.vercel.app', // Backend URL
+        target: 'http://localhost:8000', // Backend URL
         changeOrigin: true,
         secure: false,
       },
     }
   }
 })
+
