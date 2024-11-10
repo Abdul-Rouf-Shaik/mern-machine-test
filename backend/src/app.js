@@ -20,6 +20,7 @@ import adminRouter from "./routes/admin.routes.js";
 import employeeRouter from "./routes/employee.routes.js"; 
 
 //routes declaration
+app.get("/", (_, res) => res.send("Hello, I am root."));
 app.use('/api/auth', adminRouter);
 app.use('/api/employees', employeeRouter);
 
