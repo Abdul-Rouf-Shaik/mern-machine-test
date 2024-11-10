@@ -155,7 +155,7 @@ const EmployeeList = () => {
     try {
       setIsSaving(true);
       const response = await axios.put(
-        `http://localhost:8000/api/employees/${currentEmployee._id}`,
+        `https://mern-machine-test-api-psi.vercel.app/api/employees/${currentEmployee._id}`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },

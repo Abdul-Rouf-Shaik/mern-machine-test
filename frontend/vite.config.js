@@ -11,7 +11,7 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api': 'http://localhost:8000'
+      '/api': 'https://mern-machine-test-api-psi.vercel.app'
     }
   }
 })

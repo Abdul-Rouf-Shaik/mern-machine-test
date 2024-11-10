@@ -41,7 +41,7 @@ const CreateEmployee = () => {
     try {
         setIsLoading(true);
       const response = await axios.put(
-        "http://localhost:8000/api/employees",
+        "https://mern-machine-test-api-psi.vercel.app/api/employees",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
