@@ -40,7 +40,7 @@ const CreateEmployee = () => {
 
     try {
         setIsLoading(true);
-      const response = await axios.post(
+      const response = await axios.put(
         "/api/employees",
         formData,
         {
