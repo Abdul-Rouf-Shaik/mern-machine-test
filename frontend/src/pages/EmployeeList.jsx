@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../http";
 import React, { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { motion } from "framer-motion";
@@ -13,7 +13,7 @@ import { Label } from "@radix-ui/react-label";
 import { Input } from "@/components/ui/input";
 import { BarLoader } from "react-spinners";
 import { FaSearch } from "react-icons/fa";
-import { Heading1 } from "lucide-react";
+
 
 const EmployeeList = () => {
   const [employeeList, setEmployeeList] = useState([]);
@@ -155,7 +155,7 @@ const EmployeeList = () => {
     try {
       setIsSaving(true);
       const response = await axios.put(
-        `https://mern-machine-test-api-psi.vercel.app/api/employees/${currentEmployee._id}`,
+        `/api/employees/${currentEmployee._id}`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },

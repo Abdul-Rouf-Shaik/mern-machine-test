@@ -24,7 +24,7 @@ function Login() {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        "/api/auth/login",
+        "/api/auth/login/",
         {
           userName: data.username, // Map 'username' from form data to 'userName' expected by backend
           password: data.password,

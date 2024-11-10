@@ -7,7 +7,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Squash as Hamburger } from "hamburger-react";
 import { Button } from "./ui/button";
-import axios from "axios";
+import axios from "../http";
 import { useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 
@@ -21,7 +21,7 @@ const NavMobile = () => {
   const handleLogout = async () => {
     try {
       // Send request to backend to clear the auth cookie
-      await axios.post("/api/auth/logout", {}, { withCredentials: true });
+      await axios.post("/api/auth/logout/", {}, { withCredentials: true });
 
       // Clear user data from localStorage
       localStorage.removeItem("user");

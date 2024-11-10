@@ -11,7 +11,7 @@ const NavDesktop = () => {
   const handleLogout = async () => {
     try {
       // Send request to backend to clear the auth cookie
-      await axios.post("/api/auth/logout", {}, { withCredentials: true });
+      await axios.post("/api/auth/logout/", {}, { withCredentials: true });
 
       // Clear user data from localStorage
       localStorage.removeItem("user");

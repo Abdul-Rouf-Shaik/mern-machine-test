@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import axios from "../http";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
@@ -40,8 +40,8 @@ const CreateEmployee = () => {
 
     try {
         setIsLoading(true);
-      const response = await axios.put(
-        "https://mern-machine-test-api-psi.vercel.app/api/employees",
+      const response = await axios.post(
+        "/api/employees",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },

@@ -5,7 +5,7 @@ import {upload} from "../middlewares/multer.middleware.js"
 
 const router = Router();
 
-router.put('/', upload.fields([
+router.post('/', upload.fields([
     {
         name: "image",
         maxCount: 1
