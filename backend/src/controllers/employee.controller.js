@@ -44,7 +44,7 @@ export const addEmployee = asyncHandler(async (req, res) => {
   }
 
   const employee = await Employee.create({
-    image: image.url,
+    image: image?.url || "",
     name,
     email,
     mobile,
